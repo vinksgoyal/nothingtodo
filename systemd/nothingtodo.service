@@ -1,0 +1,11 @@
+[Unit]
+Description=Nothing To Do — overnight letter triage
+After=network.target
+
+[Service]
+Type=oneshot
+ConditionACPower=true
+WorkingDirectory=%h/nothingtodo
+ExecStart=%h/nothingtodo/.venv/bin/python run.py --dir %h/Downloads --apply
+StandardOutput=journal
+StandardError=journal

@@ -1,0 +1,9 @@
+ollama
+pydantic>=2
+pytesseract
+pillow
+piper-tts
+
+[dev]
+pytest
+rich
